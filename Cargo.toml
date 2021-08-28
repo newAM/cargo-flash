@@ -22,10 +22,17 @@ structopt = "0.3.22"
 env_logger = "0.9.0"
 lazy_static = "1.4.0"
 colored = "2.0.0"
-probe-rs = { version = "0.11.0", git = "https://github.com/probe-rs/probe-rs" }
-probe-rs-cli-util = { version = "0.11.0", git = "https://github.com/probe-rs/probe-rs", default-features = false, features=["anyhow"] }
+probe-rs-cli-util = { version = "0.11.0", default-features = false, features=["anyhow"] }
 git-version = "0.3.5"
 anyhow = "1.0.43"
 bytesize = "1.1.0"
 thiserror = "1.0.26"
 dunce = "1.0.2"
+
+[patch.crates-io.probe-rs]
+git = "https://github.com/probe-rs/probe-rs.git"
+rev = "bbe3bfc4604a7529f6ff3f7a6cf9b1b02cd6cb4f"
+
+[dependencies.probe-rs]
+git = "https://github.com/probe-rs/probe-rs.git"
+rev = "bbe3bfc4604a7529f6ff3f7a6cf9b1b02cd6cb4f"
